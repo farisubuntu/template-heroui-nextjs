@@ -10,5 +10,9 @@
 
 ### Commands
 
+- Install globally: _`npx heroui-cli@latest -g`_
 - Upgrade all `HeroUI` components: _`heroui upgrade --all`_
 - Upgrade Specific: _`heroui upgrade button`_
+- List all installed: _`heroui list`_
+- Diagnose and resolve issues: _`heroui doctor`_
+- Display detailed information about your project's environment settings: _`heroui env`_
