@@ -22,7 +22,8 @@ async function getLessons(id: number) {
  return { category, lessons };
 }
 
-export default async function CategoryPage({ params }: { params: { id: string } }) {
+export default async function CategoryPage(props: { params: Promise<{ id: string }> }) {
+ const params = await props.params;
  // const id= await params.id
  const { category, lessons } = await getLessons(parseInt( (await params).id));
  return (
@@ -41,7 +42,7 @@ export default async function CategoryPage({ params }: { params: { id: string } 
        </CardContent>
        <CardFooter>
         <Button asChild>
-         <Link href={`/lessons/${lesson.id}`}>View lesson</Link>
+         <Link href={`/categories/quizzes/${lesson.id}`}>View lesson</Link>
         </Button>
        </CardFooter>
       </Card>
