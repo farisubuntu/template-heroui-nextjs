@@ -37,6 +37,11 @@ export default function AppNavbar() {
             Integrations
           </Link>
         </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="/categories">
+            Categories
+          </Link>
+        </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">

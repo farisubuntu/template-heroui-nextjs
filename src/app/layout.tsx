@@ -5,7 +5,7 @@ import { Providers } from "@/app/Providers";
 
 import AppNavbar from "@/components/app-navbar";
 
-const notoNaskhArabic = Noto_Naskh_Arabic({
+export const notoNaskhArabic = Noto_Naskh_Arabic({
   variable: "--font-noto-naskh-arabic",
   subsets: ["arabic"],
 });
