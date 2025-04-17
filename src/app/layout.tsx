@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono,Noto_Naskh_Arabic } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Naskh_Arabic } from "next/font/google";
 import "@/styles/globals.css";
-import {Providers} from "@/app/Providers";
+import { Providers } from "@/app/Providers";
 
+import AppNavbar from "@/components/app-navbar";
 
 const notoNaskhArabic = Noto_Naskh_Arabic({
   variable: "--font-noto-naskh-arabic",
@@ -35,7 +36,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${notoNaskhArabic} antialiased`}
       >
         <Providers>
-        {children}
+          <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+            <AppNavbar />
+
+            {children}
+          </main>
         </Providers>
       </body>
     </html>
